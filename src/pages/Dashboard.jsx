@@ -6,6 +6,7 @@ export default function Dashboard() {
   const [botReply, setBotReply] = useState("");
   const [isListening, setIsListening] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
   const recognition =
     new window.webkitSpeechRecognition() || new window.SpeechRecognition();
@@ -74,6 +75,14 @@ export default function Dashboard() {
     sendToBot(userInput);
   };
 
+  const speakText = (text) => {
+    if (isMuted) return; // respect mute toggle
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    synth.speak(utterance);
+  };  
+
   return (
     <div className="therapist-container">
       <h1>TheraBot</h1>
@@ -102,6 +111,13 @@ export default function Dashboard() {
           {isListening ? "Listening..." : "🎙️ Speak Instead"}
         </button>
       </div>
+
+      <button 
+        onClick={() => setIsMuted(!isMuted)} 
+        style={{ position: "absolute", top: 20, right: 20 }}>
+        {isMuted ? "🔇" : "🔊"}
+        </button>
+
 
       {isLoading && (
         <div style={{ marginTop: "2rem" }}>

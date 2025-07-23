@@ -101,4 +101,18 @@
       font-size: 0.95rem;
     }
   }
+  .mute-toggle {
+    background-color: #ffe6e6;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .mute-toggle:hover {
+    background-color: #ffd3d3;
+  }
   
