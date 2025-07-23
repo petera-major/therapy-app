@@ -1,0 +1,81 @@
+.therapist-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f8fb;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    margin-top: 3rem;
+  }
+  
+  .therapist-container h1 {
+    font-size: 2rem;
+    color: #30475e;
+    margin-bottom: 1rem;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    resize: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #8ac4d0;
+    box-shadow: 0 0 0 3px rgba(138, 196, 208, 0.2);
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #6c63ff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #574fd6;
+  }
+  
+  video {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+  }
+  
+  img.bot-icon {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loader {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+  }
+  
+  @media (max-width: 600px) {
+    .therapist-container {
+      padding: 1.5rem;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
