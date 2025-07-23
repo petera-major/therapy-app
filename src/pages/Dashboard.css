@@ -1,13 +1,12 @@
 .therapist-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 3rem auto 2rem;
     padding: 2rem;
     text-align: center;
     font-family: 'Segoe UI', sans-serif;
     background: #f5f8fb;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    margin-top: 3rem;
   }
   
   .therapist-container h1 {
@@ -24,8 +23,9 @@
     resize: none;
     font-size: 1rem;
     margin-top: 1rem;
-    background: white;
+    background: #fff;
     transition: all 0.3s ease;
+    box-sizing: border-box;
   }
   
   textarea:focus {
@@ -50,17 +50,31 @@
     background: #574fd6;
   }
   
-  video {
-    max-width: 100%;
+  .bot-reply-box {
+    background: #ffffff;
+    padding: 1.2rem;
     border-radius: 12px;
     margin-top: 1.5rem;
+    color: #444;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
-  img.bot-icon {
-    width: 70px;
+  img.bot-icon,
+  img.talking-gif {
+    margin-top: 1rem;
+    width: 100px;
     border-radius: 50%;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  img.talking-gif {
+    animation: bounce 1.6s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
   }
   
   .loader {
@@ -76,6 +90,15 @@
   
     button {
       width: 100%;
+      font-size: 1rem;
+    }
+  
+    textarea {
+      font-size: 0.95rem;
+    }
+  
+    .bot-reply-box {
+      font-size: 0.95rem;
     }
   }
   
